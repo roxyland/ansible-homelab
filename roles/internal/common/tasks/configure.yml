@@ -1,0 +1,10 @@
+---
+# Configure services
+
+- name: Ensure NTP is configured
+  template:
+    src: ntp.conf.j2
+    dest: /etc/ntp.conf
+  notify:
+    - restart ntpd
+  tags: ntp

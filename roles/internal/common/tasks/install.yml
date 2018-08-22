@@ -1,0 +1,8 @@
+---
+# Install packages
+
+- name: Ensure NTP is installed
+  yum:
+    name: ntp
+    state: installed
+  tags: ntp
